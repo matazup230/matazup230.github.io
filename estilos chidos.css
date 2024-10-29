@@ -1,0 +1,88 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(empanada.png);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    animation: backgroundAnimation 1000s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-image: url(fondo2.gif); color: green; }
+    50% { background-image: url(bg.jpg); color: #61dafb; }
+    100% { background-image: url(fnaf.jpg); color: rgb(178, 21, 21); }
+}
+
+#empanada {
+    width: 100px;
+    transition: transform 0.2s, filter 0.2s, box-shadow 0.2s;
+    animation: empanadaHover 2s infinite alternate;
+    pointer-events: all;
+    cursor: pointer;
+    
+}
+
+#empanada:hover {
+    transform: scale(1.7);
+}
+
+#empanada:active {
+    transform: scale(1.7);
+    filter: brightness(1.2);
+}
+
+@keyframes empanadaHover {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+#eventMessage {
+    color: red;
+    font-weight: bold;
+    animation: blink 1s infinite, rainbowText 5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes rainbowText {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+#clickCounter {
+    font-size: 2em;
+    color: #ff6347;
+    animation: counterAnimation 1s infinite alternate;
+}
+
+@keyframes counterAnimation {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+}
+
+#amongUsContainer img {
+    width: 50px;
+    position: absolute;
+    animation: appear 1s forwards;
+}
+
+@keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+#toggleImage{
+    background: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 30px;
+    cursor: pointer;
+}
